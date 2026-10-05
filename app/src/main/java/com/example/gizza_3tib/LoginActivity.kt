@@ -28,8 +28,8 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener {
 
-            val user = binding.etUsername.text.toString()
-            val pass = binding.etPassword.text.toString()
+            val user = binding.edtUsername.text.toString()
+            val pass = binding.edtPassword.text.toString()
 
             Log.e("Hasil", "Username $user Password $pass")
             Toast.makeText(this, "Username $user Password $pass", Toast.LENGTH_LONG).show()

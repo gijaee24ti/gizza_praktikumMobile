@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.gizza_3tib.databinding.ActivityMainBinding
+import com.example.gizza_3tib.pertemuan5.LimaActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-
 class MainActivity : AppCompatActivity() {
 
     // 1. Deklarasi variabel binding
@@ -42,8 +42,11 @@ class MainActivity : AppCompatActivity() {
         binding.txtPassword.text = pass
 
         binding.btnSnackBar.setOnClickListener {
-            Snackbar.make(binding.root, "Item dihapus",
-                Snackbar.LENGTH_LONG)
+            Snackbar.make(
+                binding.root,
+                "Item dihapus",
+                Snackbar.LENGTH_LONG
+            )
                 .setAction("BATAL") {
                     // kembalikan item
                 }
@@ -53,8 +56,10 @@ class MainActivity : AppCompatActivity() {
         binding.btnAlertDialog.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Hapus data")
-                .setMessage("Data yang dihapus tidak " +
-                        "bisa dikembalikan.")
+                .setMessage(
+                    "Data yang dihapus tidak " +
+                            "bisa dikembalikan."
+                )
                 .setNegativeButton("Batal", null)
                 .setPositiveButton("Hapus") { dialog, _ ->
                     // proses hapus
@@ -65,8 +70,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnKembali.setOnClickListener {
-
             finish()
+        }
+
+        binding.btnToLima.setOnClickListener {
+            val intent = Intent(this@MainActivity, LimaActivity::class.java)
+            startActivity(intent)
         }
     }
 }
