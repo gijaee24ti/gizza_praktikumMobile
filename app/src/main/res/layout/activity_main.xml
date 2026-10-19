@@ -8,8 +8,6 @@
     android:layout_height="match_parent"
     android:background="@color/biru"
     tools:context=".MainActivity">
-
-    <!-- Judul -->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -22,7 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Username -->
     <TextView
         android:id="@+id/txtUsername"
         android:layout_width="wrap_content"
@@ -35,7 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <!-- Password -->
     <TextView
         android:id="@+id/txtPassword"
         android:layout_width="wrap_content"
@@ -48,28 +44,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
 
-    <!-- Material Card -->
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="220dp"
         android:layout_height="220dp"
         android:layout_marginTop="12dp"
         app:cardBackgroundColor="#FFEB3B"
-        app:cardElevation="2dp"
-        app:strokeColor="#BDBDBC"
-        app:strokeWidth="10dp"
         app:cardCornerRadius="40dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword">
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword"
+        app:strokeColor="#BDBDBC"
+        app:strokeWidth="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="15dp">
 
-            <!-- Snack Bar -->
             <Button
                 android:id="@+id/btnSnackBar"
                 android:layout_width="wrap_content"
@@ -81,7 +75,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- Alert Dialog -->
             <Button
                 android:id="@+id/btnAlertDialog"
                 android:layout_width="wrap_content"
@@ -98,56 +91,54 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-
-    <!-- Tombol Kembali -->
     <Button
         android:id="@+id/btnKembali"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="#19491A"
         android:text="Kembali"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/materialCardView" />
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 
     <!-- Tombol Pertemuan 5 -->
     <Button
         android:id="@+id/btnToLima"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#673AB7"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#C2185B"
         android:text="Pertemuan 5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnKembali" />
+        app:layout_constraintTop_toBottomOf="@+id/btnKembali" />
 
-    <!-- Tombol Pertemuan 6 -->
     <Button
         android:id="@+id/btnToSixth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#19491A"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#00796B"
         android:text="Pertemuan 6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnToLima" />
+        app:layout_constraintTop_toBottomOf="@+id/btnToLima" />
 
-    <!-- Tombol Logout -->
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#F44336"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D32F2F"
         android:text="Logout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnToSixth" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btnToSixth" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
