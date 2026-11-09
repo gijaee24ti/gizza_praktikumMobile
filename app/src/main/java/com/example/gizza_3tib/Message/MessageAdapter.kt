@@ -7,8 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.bumptech.glide.Glide
-import com.example.gizza_3tib.Message.MessageActivity
-import com.example.gizza_3tib.Message.MessageModel
 import com.example.gizza_3tib.databinding.ItemMessageBinding
 
 class MessageAdapter(
@@ -22,13 +20,22 @@ class MessageAdapter(
         parent: ViewGroup
     ): View {
 
-        val binding = ItemMessageBinding.inflate(
-            LayoutInflater.from(context),
-            parent,
-            false
-        )
+        val binding: ItemMessageBinding
+        val view: View
 
-        val view = binding.root
+        if (convertView == null) {
+            binding = ItemMessageBinding.inflate(
+                LayoutInflater.from(context),
+                parent,
+                false
+            )
+            view = binding.root
+            view.tag = binding
+        } else {
+            view = convertView
+            binding = view.tag as ItemMessageBinding
+        }
+
         val data = messages[position]
 
         // Muat gambar dari URL ke ImageView
